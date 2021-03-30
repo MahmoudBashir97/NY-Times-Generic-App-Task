@@ -5,7 +5,7 @@
 #.
 #In this app we are Integerating news Api of NY Times ,
 #..
-#Technologies used: 
+-#Technologies used: 
 - Kotlin
 - MVVM architecture pattern 
 - Retrofit
