@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeTimes_Fragment">
+
+    <fragment
+        android:id="@+id/homeTimes_Fragment"
+        android:name="com.mahmoudbashir.nytimesgenericapp.fragments.HomeTimes_Fragment"
+        android:label="fragment_home_times"
+        tools:layout="@layout/fragment_home_times" >
+        <action
+            android:id="@+id/action_homeTimes_Fragment_to_details_Fragment"
+            app:destination="@id/details_Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_Fragment"
+        android:name="com.mahmoudbashir.nytimesgenericapp.fragments.Details_Fragment"
+        android:label="fragment_details_"
+        tools:layout="@layout/fragment_details_">
+
+        <argument android:name="ImgUrl"
+            app:argType="string"
+            app:nullable="false"/>
+
+        <argument android:name="title"
+            app:argType="string"
+            app:nullable="false"/>
+
+        <argument android:name="article_abstract"
+            app:argType="string"
+            app:nullable="false"/>
+    </fragment>
+</navigation>
